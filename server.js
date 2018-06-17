@@ -80,7 +80,7 @@ app.get('/', function (req, res) {
 app.get('/demo', function (req, res) {
   // try to initialize the db on every request if it's not already
   // initialized.
-  res.send('{ hello: world }');  
+  res.send('{ greeting: "Hello world"  }');  
 });
 
 app.get('/pagecount', function (req, res) {
