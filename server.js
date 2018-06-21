@@ -1,8 +1,9 @@
 //  OpenShift sample Node application
 var express = require('express'),
-    app     = express(),
+    app     = express(),    
     morgan  = require('morgan');
-    
+const axios = require('axios');
+
 Object.assign=require('object-assign')
 
 app.engine('html', require('ejs').renderFile);
@@ -81,6 +82,16 @@ app.get('/demo', function (req, res) {
   // try to initialize the db on every request if it's not already
   // initialized.
   res.send('{ greeting: "Hello world"  }');  
+});
+
+app.get('/max', function (req, res) {
+  axios.get('http://myjavaapp')
+  .then(response => {
+    res.send(response.data);
+  })
+  .catch(error => {
+    console.log(error);
+  }););  
 });
 
 app.get('/pagecount', function (req, res) {
