@@ -91,7 +91,7 @@ app.get('/max', function (req, res) {
   })
   .catch(error => {
     console.log(error);
-  }););  
+  });  
 });
 
 app.get('/pagecount', function (req, res) {
