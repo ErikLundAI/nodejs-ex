@@ -81,7 +81,7 @@ app.get('/', function (req, res) {
 app.get('/demo', function (req, res) {
   // try to initialize the db on every request if it's not already
   // initialized.
-  res.send('{ greeting: "Hello world"  }');  
+  res.send('{ greeting: "Hello world and L&B"  }');  
 });
 
 app.get('/max', function (req, res) {
